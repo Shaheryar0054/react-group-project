@@ -1,0 +1,51 @@
+.NavDiv {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.NavImg {
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+  gap: 1rem;
+}
+
+.NavDiv ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavDiv ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.NavDiv ul li a {
+  text-decoration: none;
+  color: #0037ff;
+}
+
+.NavDiv ul li a.active {
+  text-decoration: underline;
+}
+
+#nav-container ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 10rem;
+}
+
+#nav-container ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pages-line {
+  height: 1rem;
+  color: black;
+}
