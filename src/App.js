@@ -1,9 +1,10 @@
 import React from 'react';
+import Nav from './components/NavBar';
 
 function App() {
   return (
     <div>
-      <h1>Hello React</h1>
+      <Nav />
     </div>
   );
 }
