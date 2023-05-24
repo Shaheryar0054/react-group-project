@@ -1,0 +1,24 @@
+.rocket-container {
+  padding: 2rem;
+}
+
+.rocket-card {
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.rocket-image {
+  width: 267px;
+  height: 200px;
+}
+
+.reserve-button {
+  background-color: #00a6ff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  width: 10rem;
+}
