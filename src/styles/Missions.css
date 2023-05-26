@@ -24,3 +24,41 @@ button {
   font-size: 1rem;
   width: 11vw;
 }
+
+.leaveMissionBtn {
+  background-color: #d3d8db;
+  padding: 8px 14px;
+  border-radius: 7px;
+  color: rgb(165, 25, 25);
+  cursor: pointer;
+  border: red solid 1px;
+  width: 10rem;
+}
+
+.joinMissionBnt {
+  background-color: #d3d8db;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  color: rgb(12, 11, 11);
+  cursor: pointer;
+  width: 10rem;
+}
+
+.not-a-member {
+  background-color: gray;
+  padding: 8px 4px;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  width: 8rem;
+}
+
+.Activemember {
+  background-color: #157ab4;
+  padding: 8px 4px;
+  border-radius: 7px;
+  color: rgb(235, 230, 230);
+  cursor: pointer;
+  width: 8rem;
+}
