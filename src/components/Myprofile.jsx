@@ -4,9 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { missionsApi, fetchmissionDataProfile } from './Redux/missionsSlice';
 
 const MyProfileComponent = () => {
-  const missionsDataProfile = useSelector((state) => state.mission.missionsDataProfile);
-  console.log(missionsDataProfile);
-
   const dispatch = useDispatch();
 
   useEffect(() => {

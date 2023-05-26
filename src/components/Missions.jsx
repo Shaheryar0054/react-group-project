@@ -8,7 +8,6 @@ import '../styles/Missions.css';
 function Missions() {
   const missionsData = useSelector((state) => state.mission.missions);
   const missionsDataProfile = useSelector((state) => state.mission.missionsDataProfile);
-  console.log(missionsDataProfile);
 
   const dispatch = useDispatch();
 
