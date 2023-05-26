@@ -22,3 +22,26 @@
   cursor: pointer;
   width: 10rem;
 }
+
+.cancel-button {
+  background-color: #e2e6e9;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  color: rgb(5, 4, 4);
+  cursor: pointer;
+  width: auto;
+}
+
+.appearBtn {
+  font-size: small;
+  background-color: #00a6ff;
+  color: white;
+  width: auto;
+  border-radius: 10px;
+  border: #00a6ff;
+}
+
+.nonepart {
+  display: none;
+}

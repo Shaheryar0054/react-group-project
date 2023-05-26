@@ -20,7 +20,7 @@ const Nav = () => (
         <nav id="nav-container">
           <ul>
             <li>
-              <NavLink to="/rockets" activeClassName="active">
+              <NavLink to="./" activeClassName="active">
                 Rockets
               </NavLink>
             </li>
@@ -41,7 +41,7 @@ const Nav = () => (
       <hr />
     </header>
     <Routes>
-      <Route path="/rockets" element={<Rockets />} />
+      <Route path="/" element={<Rockets />} />
       <Route path="/missions" element={<Missions />} />
       <Route path="/profile" element={<Myprofile />} />
     </Routes>

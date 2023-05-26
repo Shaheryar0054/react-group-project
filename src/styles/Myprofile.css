@@ -1,0 +1,31 @@
+.mainProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.line {
+  width: 45vw;
+  margin-bottom: -3px;
+}
+
+.listreserved {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  margin-left: 3vw;
+  margin-top: 0;
+}
+
+.td {
+  border: 1px solid black;
+  padding: 8px;
+  width: 45vw;
+}
+
+/* .titleReservedMission {
+ margin-left: 3vw;
+}
+
+.titleReservedRocket {
+ margin-left: 5vw;
+} */

@@ -1,16 +1,29 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { missionsApi } from './Redux/missionsSlice';
+import {
+  missionsApi, fetchmissionDataProfile, joinMission, leaveMission,
+} from './Redux/missionsSlice';
 import '../styles/Missions.css';
 
 function Missions() {
-  const missions = useSelector((state) => state.mission.missions);
+  const missionsData = useSelector((state) => state.mission.missions);
+  const missionsDataProfile = useSelector((state) => state.mission.missionsDataProfile);
+  console.log(missionsDataProfile);
 
   const dispatch = useDispatch();
 
+  const handlejoinMission = (event) => {
+    dispatch(joinMission(event.target.id));
+  };
+
+  const handleleaveMission = (event) => {
+    dispatch(leaveMission(event.target.id));
+  };
+
   useEffect(() => {
     dispatch(missionsApi());
-  }, [dispatch]); // Add dispatch to the dependency array
+    dispatch(fetchmissionDataProfile());
+  }, [dispatch]);
 
   return (
     <div>
@@ -25,19 +38,32 @@ function Missions() {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
+          {missionsData && Array.isArray(missionsData) && missionsDataProfile.map((mission) => (
             <tr key={mission.mission_id}>
               <td>{mission.mission_name}</td>
               <td className="description">{mission.description}</td>
               <td>
-                <button type="button" className="NotBtn">NOT A MEMBER</button>
-                {' '}
+                {mission.reserved ? (
+                  <div className="Activemember" id={mission.mission_id}>
+                    Active Member
+                  </div>
+                ) : (
+                  <div className="not-a-member" id={mission.mission_id}>
+                    NOT A MEMBER
+                  </div>
+                )}
               </td>
               <td>
-                <button type="button" className="JoinBtn">Join mission</button>
-                {' '}
+                {mission.reserved ? (
+                  <button className="leaveMissionBtn" id={mission.mission_id} type="button" onClick={handleleaveMission}>
+                    leaveMission
+                  </button>
+                ) : (
+                  <button className=" joinMissionBnt" id={mission.mission_id} type="button" onClick={handlejoinMission}>
+                    joinMission
+                  </button>
+                )}
               </td>
-              {/* Add more table cells with corresponding data */}
             </tr>
           ))}
         </tbody>
