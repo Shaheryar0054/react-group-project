@@ -20,7 +20,11 @@
       "import/no-unresolved": "off",
       "no-shadow": "off",
       "no-unreachable":"off",
-      "no-param-reassign":"off"
+      "no-param-reassign":"off",
+      "react/prop-types":"off",
+      "no-sequences":"off",
+      "no-unused-expressions":"off",
+      "jsx-a11y/anchor-is-valid":"off"
     },
     "overrides": [
       {
