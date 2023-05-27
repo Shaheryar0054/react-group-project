@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'https://api.spacexdata.com/v4/rockets';
 const LOCAL_STORAGE_KEY = 'rocketDataProfile';
@@ -26,24 +26,24 @@ const rocketsSlice = createSlice({
     rocketDataProfile: [],
   },
   reducers: {
-    reserveRocket: (state, action) => ({
-      ...state,
-      rocketDataProfile: state.rocketDataProfile.map((rocket) => {
+    reserveRocket: (state, action) => {
+      state.rocketDataProfile = state.rocketDataProfile.map((rocket) => {
         if (rocket.id === action.payload) {
           return { ...rocket, reserved: true };
         }
         return rocket;
       }),
-    }),
-    cancelRocketReservation: (state, action) => ({
-      ...state,
-      rocketDataProfile: state.rocketDataProfile.map((rocket) => {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state.rocketDataProfile));
+    },
+    cancelRocketReservation: (state, action) => {
+      state.rocketDataProfile = state.rocketDataProfile.map((rocket) => {
         if (rocket.id === action.payload) {
           return { ...rocket, reserved: false };
         }
         return rocket;
       }),
-    }),
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state.rocketDataProfile));
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -56,7 +56,7 @@ const rocketsSlice = createSlice({
           ...state,
           rocketDataProfile: action.payload,
         };
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(action.payload));
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newState.rocketDataProfile));
         return newState;
       });
   },
