@@ -3,7 +3,7 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#In this project we build simple Book list application that can add and remove the Books)
+- [📖 About the Project]()
   - [🛠 Built With](#build-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -47,44 +47,47 @@
   </ul>
 </details>
 
-### Key Features <a name="key-features"></a>
-
-- **[Fetching-data-from-API]**
-- **[Displaying-on-UI]**
-- **[Implemented-reservation-function]**
-- **[Implemented-JoinMission-function]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://github.com/Shaheryar0054/react-group-project.git)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-- npm install
-- npm start
-
+```Prerequisites
+In order to run this project, you need to have a web browser installed on your computer.
+```
 ### Setup
 
-To get a local copy up and running follow these simple example steps.
+Clone this repository to your desired folder by running the following command:
 
-- Clone the repository using:
+```Setup
+ https://github.com/Shaheryar0054/react-group-project.git
+  ```
+ ### Install
+
+You can install this repositiory using:
+```install
+  npm install
 ```
-   https://github.com/Shaheryar0054/react-group-project.git
+### Usage
+
+```Usage
+To run the project, open the index.html file in your web browser.
+```
+### Run tests
+
+To run tests, run the following command:
+
+```tests
+ npx stylelint "**/*.{css,scss}"
+ npx eslint "**/*.{js,jsx}"
+ npm start
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Deployment
+it will soon be put
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -102,6 +105,15 @@ To get a local copy up and running follow these simple example steps.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Key Features <a name="key-features"></a>
+
+- **[Fetching-data-from-API]**
+- **[Displaying-on-UI]**
+- **[Implemented-reservation-function]**
+- **[Implemented-JoinMission-function]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
