@@ -71,9 +71,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- Browser
-- git
-- code editor
+- npm install
+- npm start
 
 ### Setup
 
@@ -106,8 +105,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] **[new_feature_1]**
-- [] **[new_feature_2]**
+- **[Enhance the My Profile section by adding the "Read more" button for each mission and rocket. Upon click, it should open a corresponding Wikipedia page in a new tab. NOTE - you need to get that extra Wikipedia URL from the API's payload.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
