@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const API_URL = 'https://api.spacexdata.com/v3/missions';
 const LOCAL_STORAGE_KEY2 = 'missionsDataProfile';
 
-export const missionsApi = createAsyncThunk('fethmission', async () => {
-  const response = await axios.get(API_URL);
-  return response.data;
+export const missionsApi = createAsyncThunk('fetchMissions', async () => {
+  const response = await fetch(API_URL);
+  const data = await response.json(); // Extract the data from the response
+  return data;
 });
 
 export const fetchmissionDataProfile = createAsyncThunk('fetchProfile', async () => {
@@ -15,7 +15,7 @@ export const fetchmissionDataProfile = createAsyncThunk('fetchProfile', async ()
     const parsedDat = JSON.parse(stored);
     return parsedDat;
   }
-  const response = await axios.get(API_URL);
+  const response = await fetch(API_URL);
   return response.data;
 });
 

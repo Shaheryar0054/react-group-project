@@ -1,12 +1,12 @@
-import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'https://api.spacexdata.com/v4/rockets';
 const LOCAL_STORAGE_KEY = 'rocketDataProfile';
 
 export const fetchRocketsData = createAsyncThunk('rockets/fetchData', async () => {
-  const response = await axios.get(API_URL);
-  return response.data;
+  const response = await fetch(API_URL);
+  const data = await response.json(); // Extract the data from the response
+  return data;
 });
 
 export const fetchRocketsDataProfile = createAsyncThunk('rockets/fetchProfile', async () => {
@@ -15,8 +15,9 @@ export const fetchRocketsDataProfile = createAsyncThunk('rockets/fetchProfile', 
     const parsedData = JSON.parse(storedData);
     return parsedData;
   }
-  const response = await axios.get(API_URL);
-  return response.data;
+  const response = await fetch(API_URL);
+  const data = await response.json(); // Extract the data from the response
+  return data;
 });
 
 const rocketsSlice = createSlice({
