@@ -51,6 +51,10 @@
 
 To get a local copy up and running, follow these steps.
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://shiny-druid-017648.netlify.app/)
+
 ### Prerequisites
 
 ```Prerequisites
